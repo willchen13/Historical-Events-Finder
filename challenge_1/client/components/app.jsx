@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Form from './Form.jsx';
+import EventList from './EventList.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -8,19 +10,20 @@ class App extends Component {
     events: [],
     query: '',
     }
+    this.searchEvents = this.searchEvents.bind(this);
   }
-  handleChange(e) {
-    e.preventDefault();
-    this.searchEvents(this.state.query)
+
+  componentDidMount() {
+    this.searchEvents('');
   }
 
   searchEvents(query) {
-    console.log('searching...');
-    axios.get('/get', {
-        params: {
-            q: query,
-            _limit: 10,
-        }
+    console.log('query', query);
+    axios.get('/events', {
+      params: {
+          q: query,
+          _limit: 10,
+      }
     })
     .then(response => {
       console.log('data', response.data);
@@ -31,8 +34,14 @@ class App extends Component {
   }
   render() {
     return(
-      
-    )
-  }
+      <React.Fragment>
+        <h2> Historical Event Finder</h2>
+        <Form searchEvents={this.searchEvents}/>
+        <EventList events={this.state.events}/>
+      </React.Fragment>
+    );
+  };
 
-}
+};
+
+export default App;

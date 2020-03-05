@@ -8,8 +8,8 @@
     "node": "12.^14.1"
   },
   "scripts": {
-    "build": "webpack",
-    "start": "json-server --watch db.json"
+    "react-dev": "webpack -d --watch",
+    "start": "json-server --watch data/db.json"
   },
   "dependencies": {
     "axios": "^0.19.2",
