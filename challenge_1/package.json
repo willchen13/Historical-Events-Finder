@@ -1,18 +1,21 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "Historical-Events-Finder",
+  "version": "1.0.0",
+  "description": "Single page react JS app that enables users to search and browse historical event information",
   "author": "",
   "license": "",
   "engines": {
     "node": "12.^14.1"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "json-server --watch db.json"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "react-paginate": "^6.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",

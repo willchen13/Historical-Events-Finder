@@ -20,7 +20,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 ## Development
 
-Install: webpack 4.x | babel-loader 8.x | babel 7.x
+Install (if not already): webpack 4.x | babel-loader 8.x | babel 7.x
 
 npm install -D babel-loader @babel/core @babel/preset-env webpack
 
