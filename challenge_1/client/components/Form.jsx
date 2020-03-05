@@ -9,7 +9,7 @@ const Form = ({searchEvents}) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    searchEvents(text);
+    searchEvents(text, 0);
   }
 
   return (
