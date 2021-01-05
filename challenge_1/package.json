@@ -12,7 +12,7 @@
     "start": "json-server --watch data/db.json"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-paginate": "^6.3.2"
